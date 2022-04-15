@@ -14,6 +14,7 @@ import java.util.List;
 
 public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHolder>{
     public Boolean flag=false;
+    private OnItemListener onItemListener;
     private List<AllText> mAllTextList;//定义一个新的arraylist,数据类型为自定义的AllText
     //写获取布局中相关控件的方法
     static class ViewHolder extends RecyclerView.ViewHolder{
@@ -27,11 +28,10 @@ public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHold
             textName=(TextView) itemView.findViewById(R.id.test_text);
         }
     }
-public void setCheckbox(Boolean flag){
-        this.flag=flag;
-}
-    public AllTextAdapter(List<AllText> allTextList){
+
+    public AllTextAdapter(List<AllText> allTextList,Boolean flag){
         mAllTextList=allTextList;
+        this.flag=flag;
     }//重载，传入数据的方法
 
     //开始的触发事件（自动创建的构造）
@@ -42,6 +42,10 @@ public void setCheckbox(Boolean flag){
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_text,parent,false);
         //LayoutInflater.from(parent.getContext()).inflate(R.layout.xxx,parent,false);重复
         ViewHolder holder=new ViewHolder(view);//获取具体布局中的具体控件
+
+        view.setOnClickListener(new RV_ItemListener());
+        view.setOnLongClickListener(new RV_ItemListener());
+
         return holder;
     }
     //中间过程触发事件（自动创建的构造）
@@ -54,11 +58,11 @@ public void setCheckbox(Boolean flag){
         try {
             if (flag == false) {
                 holder.checkBox.setVisibility(View.INVISIBLE);
-                this.notifyDataSetChanged();
+
 
             } else {
                 holder.checkBox.setVisibility(View.VISIBLE);
-                this.notifyDataSetChanged();
+
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -70,5 +74,29 @@ public void setCheckbox(Boolean flag){
         return mAllTextList.size();
     }
 
+    public  interface OnItemListener{
+        void OnItemClickListener(View view, int position);
+        void OnItemLongClickListener(View view, int position);
+    }
+    class RV_ItemListener implements View.OnClickListener, View.OnLongClickListener{
 
+        @Override
+        public void onClick(View view) {
+            if (onItemListener != null){
+                onItemListener.OnItemClickListener(view, view.getId());
+            }
+        }
+        @Override
+        public boolean onLongClick(View view) {
+            if (onItemListener != null){
+                onItemListener.OnItemLongClickListener(view,view.getId());
+            }
+            return true;
+        }
+    }
+
+    //接口回调步骤3：实例化 暴露给外面的调用者，定义Listener的方法（）
+    public void setOnItemListenerListener(OnItemListener listener){
+        this.onItemListener = listener;
+    }
 }

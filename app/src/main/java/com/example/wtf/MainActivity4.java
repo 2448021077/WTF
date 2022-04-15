@@ -1,5 +1,6 @@
 package com.example.wtf;
 
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -16,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,9 @@ public class MainActivity4 extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main4);
         initText();//为原始数据添加数据
         RecyclerView recyclerView=findViewById(R.id.view_one);//找到布局中的recycleview控件
+        recyclerView.addItemDecoration(new DividerItemDecoration(
+                this,
+                DividerItemDecoration.VERTICAL));//分割线
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);//设置布局管理器，cv工程
         recyclerView.setLayoutManager(linearLayoutManager);//为recycleview添加布局管理器，cv
          /*adapter=new AllTextAdapter(allTextList);//定义一个新的自定义适配器（AllTextAdapter），并且把数据传进去
@@ -120,8 +125,8 @@ public class MainActivity4 extends Activity implements View.OnClickListener {
         int id=v.getId();
         switch (id){
             case R.id.make_text:{
-                adapter.allTextAdapter.setCheckbox(true);
-                adapter.notifyDataSetChanged();
+                adapter.setCheckbox(true);
+
                 popupWindow.dismiss();//销毁popwindow
                 View rootView=LayoutInflater.from(MainActivity4.this).inflate(R.layout.activity_main4,null);
                 newPopWindow.showAtLocation(rootView, Gravity.BOTTOM,0,0);
@@ -131,8 +136,8 @@ public class MainActivity4 extends Activity implements View.OnClickListener {
                 popupWindow.dismiss();
                 break;
             case R.id.delete:
-                adapter.allTextAdapter.setCheckbox(false);
-                adapter.notifyDataSetChanged();
+                adapter.setCheckbox(false);
+
                 newPopWindow.dismiss();
         }
     }

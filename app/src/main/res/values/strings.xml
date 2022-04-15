@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WTF</string>
+    <string name="main_name1">序号</string>
+    <string name="main_name2">名称</string>
+    <string name="main_name3">投入费用</string>
+    <string name="main_name4">日期 如2022/2/2</string>
+    <string name="main_name5">备注</string>
+    <string name="title_name1">能源开销</string>
+    <string name="title_name2">鱼苗成本</string>
+    <string name="title_name3">菜苗成本</string>
+    <string name="button_name1">提交</string>
+    <string name="two_name1">单价</string>
+    <string name="two_name2">重量</string>
+</resources>

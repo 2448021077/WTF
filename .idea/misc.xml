@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable-v24/ac_frame.xml" value="0.20185185185185187" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable-v24/ic_baseline_arrow_back_24.xml" value="0.20185185185185187" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.20185185185185187" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.11145833333333334" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/ic_baseline_test_1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/ic_baseline_test_3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/ic_baseline_text_2.xml" value="0.16770833333333332" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20185185185185187" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/ic_rmb.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/yuanbiankuang.xml" value="0.16770833333333332" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/yuanbiankuang2.xml" value="0.1" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/drawable/yuanbiankuang3.xml" value="0.19479166666666667" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/activity_main2.xml" value="0.264" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/activity_main3.xml" value="0.161231884057971" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/activity_main4.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/biankuang_test.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/item_text.xml" value="0.1078125" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/popwindowdelete.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/test_dialog.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/test_popupwindow.xml" value="0.18072916666666666" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/title.xml" value="0.161231884057971" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/title2.xml" value="0.161231884057971" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/title3.xml" value="0.4" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/title4.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/layout/yuanbiankuang.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/w2448/Desktop/visual/WTF/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14583333333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

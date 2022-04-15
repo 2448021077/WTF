@@ -43,14 +43,14 @@ public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHold
         //LayoutInflater.from(parent.getContext()).inflate(R.layout.xxx,parent,false);重复
         ViewHolder holder=new ViewHolder(view);//获取具体布局中的具体控件
 
-        view.setOnClickListener(new RV_ItemListener());
-        view.setOnLongClickListener(new RV_ItemListener());
+
 
         return holder;
     }
     //中间过程触发事件（自动创建的构造）
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int i) {
+        int position = holder.getLayoutPosition();
         AllText allText=mAllTextList.get(position);//获取当前位置的数据，我的理解是for循环的游标
         //为控件添加数据
         holder.textName.setText(allText.getName());
@@ -67,6 +67,23 @@ public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHold
         }catch (Exception e){
             e.printStackTrace();
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemListener != null){
+                    onItemListener.OnItemClickListener(v, position);
+                }
+            }
+        });
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                if (onItemListener != null){
+                    onItemListener.OnItemLongClickListener(v, position);
+                }
+                return true;
+            }
+        });
     }
     //返回recycleview的行数，这里返回mAllTextList数据个数
     @Override

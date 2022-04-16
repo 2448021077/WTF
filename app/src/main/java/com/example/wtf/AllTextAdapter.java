@@ -42,9 +42,6 @@ public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHold
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_text,parent,false);
         //LayoutInflater.from(parent.getContext()).inflate(R.layout.xxx,parent,false);重复
         ViewHolder holder=new ViewHolder(view);//获取具体布局中的具体控件
-
-
-
         return holder;
     }
     //中间过程触发事件（自动创建的构造）
@@ -55,19 +52,12 @@ public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHold
         //为控件添加数据
         holder.textName.setText(allText.getName());
         holder.testImage.setImageResource(allText.getImageId());
-        try {
             if (flag == false) {
                 holder.checkBox.setVisibility(View.INVISIBLE);
-
-
             } else {
                 holder.checkBox.setVisibility(View.VISIBLE);
-
             }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {//点击，长按触发事件
             @Override
             public void onClick(View v) {
                 if (onItemListener != null){
@@ -95,7 +85,7 @@ public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHold
         void OnItemClickListener(View view, int position);
         void OnItemLongClickListener(View view, int position);
     }
-    class RV_ItemListener implements View.OnClickListener, View.OnLongClickListener{
+    /*class RV_ItemListener implements View.OnClickListener, View.OnLongClickListener{
 
         @Override
         public void onClick(View view) {
@@ -110,7 +100,7 @@ public class AllTextAdapter extends RecyclerView.Adapter<AllTextAdapter.ViewHold
             }
             return true;
         }
-    }
+    }*/
 
     //接口回调步骤3：实例化 暴露给外面的调用者，定义Listener的方法（）
     public void setOnItemListenerListener(OnItemListener listener){
